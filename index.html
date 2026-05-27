@@ -7,14 +7,12 @@
     <style>
         :root { --bg: #fdfcf9; --text: #3d3d3d; --accent: #8b857a; }
         body { font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; line-height: 1.8; }
-        
         nav { position: sticky; top: 0; background: var(--bg); padding: 20px; text-align: center; border-bottom: 1px solid #eee; z-index: 1000; }
         nav a { margin: 0 15px; text-decoration: none; color: var(--text); font-size: 0.9rem; letter-spacing: 2px; }
-        
         header { padding: 60px 20px; text-align: center; }
         .section { max-width: 900px; margin: 0 auto; padding: 60px 20px; scroll-margin-top: 80px; }
         h2 { border-left: 3px solid var(--accent); padding-left: 15px; margin-bottom: 30px; }
-        .profile-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; font-size: 0.95rem; }
+        .profile-content { font-size: 0.95rem; line-height: 2; }
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
         .art-item { background: white; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
         .art-item img { width: 100%; height: 250px; object-fit: cover; }
@@ -38,25 +36,21 @@
     <section id="profile" class="section">
         <h2>Artist Profile</h2>
         <div class="profile-content">
-            <div>
-                <strong>[학력]</strong><br>2007 홍익대 미술대학원 졸업<br><br>
-                <strong>[개인전]</strong><br>
-                2025 한옥 갤러리 (휴 休~)<br>
-                2022 한옥 갤러리 (흐르는 풍경)<br>
-                2019 한옥 갤러리 (마음이 머무는 풍경)<br>
-                2017 경인미술관 (休휴~)<br>
-                2015 한벽원 갤러리 (虛를 위한 實)<br>
-                2011 예술의 전당 (樹木)<br>
-                2009 홍익대학교 현대미술관
-            </div>
-            <div>
-                <strong>[단체전 등]</strong><br>
-                2024 제15회 안평안견예술정신전<br>
-                2022 제13회 안평안견예술정신전<br>
-                2019 산 마음전<br>
-                2015 홍익대 동양화과 총동문회전<br>
-                2011 새아침전 외 다수
-            </div>
+            <p><strong>[학력]</strong><br>2007 홍익대학교 미술대학원 졸업</p>
+            <p><strong>[개인전]</strong><br>
+            2025 한옥 갤러리 (휴 休~)<br>
+            2022 한옥 갤러리 (흐르는 풍경)<br>
+            2019 한옥 갤러리 (마음이 머무는 풍경)<br>
+            2017 경인미술관 (休휴~)<br>
+            2015 한벽원 갤러리 (虛를 위한 實)<br>
+            2011 예술의 전당 (樹木)<br>
+            2009 홍익대학교 현대미술관</p>
+            <p><strong>[단체전 등]</strong><br>
+            2024 제15회 안평안견예술정신전<br>
+            2022 제13회 안평안견예술정신전<br>
+            2019 산 마음전<br>
+            2015 홍익대 동양화과 총동문회전<br>
+            2011 새아침전 외 다수</p>
         </div>
     </section>
 
@@ -65,13 +59,21 @@
         <div id="gallery-container" class="gallery-grid"></div>
     </section>
 
+    <section id="guestbook" class="section">
+        <h2>방명록 (Guestbook)</h2>
+        <p>작가님의 작품 세계에 대한 소중한 감상을 남겨주세요.</p>
+        <!-- 구글 폼 링크를 아래 href에 넣으면 됩니다 -->
+        <a href="#" style="background:var(--accent); color:white; padding:10px 20px; text-decoration:none; display:inline-block; border-radius:5px;">방명록 작성하러 가기</a>
+    </section>
+
     <script>
-        // 2017년 전시작 및 최신 작품 리스트
+        // 모든 작품들을 연도별로 추가할 수 있도록 리스트를 확장했습니다.
         const artworks = [
-            { src: "https://i.imgur.com/vH9pQ1o.jpg", year: "2025", title: "농월정", desc: "화선지에 수묵담채, 58X30cm" },
-            { src: "https://i.imgur.com/GzBw5qN.jpg", year: "2022", title: "수타사", desc: "한지에 수묵담채, 31.6X46cm" },
-            { src: "https://i.imgur.com/8Qz9jXo.jpg", year: "2017", title: "休(휴) 시리즈 1", desc: "경인미술관 전시작" },
-            { src: "https://i.imgur.com/2Xy1aLm.jpg", year: "2017", title: "休(휴) 시리즈 2", desc: "경인미술관 전시작" }
+            { src: "https://i.imgur.com/GnXJ11w.jpg", year: "2025", title: "농월정", desc: "화선지에 수묵담채, 58X30cm" },
+            { src: "https://i.imgur.com/VQ7rNf9.jpg", year: "2025", title: "신작", desc: "수묵담채" },
+            { src: "https://i.imgur.com/mQTaZnI.jpg", year: "2022", title: "수타사", desc: "한지에 수묵담채" },
+            { src: "https://i.imgur.com/Tfuy8q3.jpg", year: "2017", title: "休(휴) 1", desc: "경인미술관 전시작" },
+            { src: "https://i.imgur.com/Rw5V72c.jpg", year: "2017", title: "休(휴) 2", desc: "경인미술관 전시작" }
         ];
 
         const container = document.getElementById('gallery-container');
