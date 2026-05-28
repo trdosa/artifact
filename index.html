@@ -15,34 +15,30 @@
         
         .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; font-size: 0.95rem; }
         
-        /* 연도별 전시 섹션 - 이미지 크기 고정 */
         .year-section { margin-bottom: 60px; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
         .year-title { font-size: 1.4rem; color: var(--accent); font-weight: bold; margin-bottom: 15px; display: block; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        
-        /* 작가노트 상단 배치 및 스타일 */
         .author-note { font-style: italic; color: #666; margin-bottom: 20px; white-space: pre-line; padding: 15px; background: #f9f9f9; border-left: 3px solid var(--accent); font-size: 0.95rem; }
         
-        /* 이미지 크기 통일: 높이 400px 고정, 비율 유지 */
-        .main-art { width: 100%; height: 400px; object-fit: contain; background-color: #fcfcfc; border-radius: 5px; margin-bottom: 20px; border: 1px solid #eee; }
+        /* 버튼 스타일 - 클릭 가능하도록 명확히 설정 */
+        .main-art { width: 100%; height: 400px; object-fit: contain; border-radius: 5px; margin-bottom: 20px; background: #fcfcfc; }
+        .gallery-link-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .gallery-link-btn:hover { background: #6d685e; }
         
         footer { text-align: center; padding: 40px; color: #aaa; font-size: 0.8rem; }
-          /* iframe 스타일 추가 */
-        .imgur-gallery { width: 100%; height: 500px; border: none; margin-top: 10px; }
-        footer { text-align: center; padding: 40px; color: #aaa; font-size: 0.8rem; }
     </style>
-    .gallery-link-btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 15px;
-    background: var(--accent);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 15px;
-    }   
-    .gallery-link-btn:hover { background: #6d685e; }
 </head>
 <body>
 
