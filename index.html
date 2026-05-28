@@ -10,13 +10,15 @@
         nav { position: sticky; top: 0; background: var(--bg); padding: 20px; text-align: center; border-bottom: 1px solid #eee; z-index: 1000; }
         nav a { margin: 0 15px; text-decoration: none; color: var(--text); font-size: 0.9rem; letter-spacing: 2px; }
         header { padding: 60px 20px; text-align: center; }
-        .section { max-width: 900px; margin: 0 auto; padding: 60px 20px; scroll-margin-top: 80px; }
-        h2 { border-left: 3px solid var(--accent); padding-left: 15px; margin-bottom: 30px; }
-        .profile-content { font-size: 0.95rem; line-height: 2; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .art-item { background: white; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
-        .art-item img { width: 100%; height: 250px; object-fit: cover; }
-        .art-info { padding-top: 15px; }
+        .section { max-width: 800px; margin: 0 auto; padding: 60px 20px; scroll-margin-top: 80px; }
+        h2 { border-left: 3px solid var(--accent); padding-left: 15px; margin-bottom: 40px; }
+        
+        /* 연도별 전시 섹션 */
+        .year-section { margin-bottom: 80px; padding: 30px; background: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .year-title { font-size: 1.5rem; color: var(--accent); font-weight: bold; margin-bottom: 20px; display: block; }
+        .year-desc { white-space: pre-line; font-size: 1rem; margin-bottom: 30px; color: #555; }
+        .main-art { width: 100%; height: auto; margin-bottom: 20px; }
+        
         footer { text-align: center; padding: 50px; color: #aaa; font-size: 0.8rem; }
     </style>
 </head>
@@ -35,62 +37,45 @@
 
     <section id="profile" class="section">
         <h2>Artist Profile</h2>
-        <div class="profile-content">
-            <p><strong>[학력]</strong><br>2007 홍익대학교 미술대학원 졸업</p>
-            <p><strong>[개인전]</strong><br>
-            2025 한옥 갤러리 (휴 休~)<br>
-            2022 한옥 갤러리 (흐르는 풍경)<br>
-            2019 한옥 갤러리 (마음이 머무는 풍경)<br>
-            2017 경인미술관 (休휴~)<br>
-            2015 한벽원 갤러리 (虛를 위한 實)<br>
-            2011 예술의 전당 (樹木)<br>
-            2009 홍익대학교 현대미술관</p>
-            <p><strong>[단체전 등]</strong><br>
-            2024 제15회 안평안견예술정신전<br>
-            2022 제13회 안평안견예술정신전<br>
-            2019 산 마음전<br>
-            2015 홍익대 동양화과 총동문회전<br>
-            2011 새아침전 외 다수</p>
-        </div>
+        <p>홍익대학교 미술대학원 졸업 및 다수의 개인전과 단체전 참여.</p>
     </section>
 
     <section id="exhibitions" class="section">
         <h2>전시공간 (Exhibitions)</h2>
-        <div id="gallery-container" class="gallery-grid"></div>
+
+        <!-- 2025년 -->
+        <div class="year-section">
+            <span class="year-title">2025년 - 휴(休)~</span>
+            <img src="https://i.imgur.com/GnXJ11w.jpg" class="main-art" alt="2025대표작">
+            <p class="year-desc">오르고, 내려가고….. 모이고, 흩어지고….. 변화의 파도 속에서 흔들리지 않는 중심을 찾으려 깊은 숨을 고른다. 휴(休)~ 그 숨결 속에</p>
+            <blockquote class="imgur-embed-pub" lang="en" data-id="a/41zOiwl"><a href="//imgur.com/a/41zOiwl">2025년 앨범 보기</a></blockquote>
+        </div>
+
+        <!-- 2022년 -->
+        <div class="year-section">
+            <span class="year-title">2022년 - 흐르는 풍경</span>
+            <img src="https://i.imgur.com/mQTaZnI.jpg" class="main-art" alt="2022대표작">
+            <p class="year-desc">시간의 흐름 속에 머무는 풍경을 담아내다.</p>
+            <blockquote class="imgur-embed-pub" lang="en" data-id="a/5ahQIpK"><a href="//imgur.com/a/5ahQIpK">2022년 앨범 보기</a></blockquote>
+        </div>
+
+        <!-- 다른 연도들도 같은 방식으로 추가 가능 -->
     </section>
 
     <section id="guestbook" class="section">
         <h2>방명록 (Guestbook)</h2>
-        <p>작가님의 작품 세계에 대한 소중한 감상을 남겨주세요.</p>
-        <!-- 구글 폼 링크를 아래 href에 넣으면 됩니다 -->
-        <a href="#" style="background:var(--accent); color:white; padding:10px 20px; text-decoration:none; display:inline-block; border-radius:5px;">방명록 작성하러 가기</a>
+        <a href="https://forms.gle/K3dEng1LW7qC9vvd8" target="_blank" style="background:var(--accent); color:white; padding:12px 24px; text-decoration:none; border-radius:5px;">방명록 작성하기</a>
     </section>
 
-    <script>
-        // 모든 작품들을 연도별로 추가할 수 있도록 리스트를 확장했습니다.
-        const artworks = [
-            { src: "https://i.imgur.com/GnXJ11w.jpg", year: "2025", title: "농월정", desc: "화선지에 수묵담채, 58X30cm" },
-            { src: "https://i.imgur.com/VQ7rNf9.jpg", year: "2025", title: "신작", desc: "수묵담채" },
-            { src: "https://i.imgur.com/mQTaZnI.jpg", year: "2022", title: "수타사", desc: "한지에 수묵담채" },
-            { src: "https://i.imgur.com/Tfuy8q3.jpg", year: "2017", title: "休(휴) 1", desc: "경인미술관 전시작" },
-            { src: "https://i.imgur.com/Rw5V72c.jpg", year: "2017", title: "休(휴) 2", desc: "경인미술관 전시작" }
-        ];
-
-        const container = document.getElementById('gallery-container');
-        artworks.forEach(art => {
-            container.innerHTML += `
-                <div class="art-item">
-                    <img src="${art.src}" alt="${art.title}">
-                    <div class="art-info">
-                        <p style="color:var(--accent); font-weight:bold;">${art.year}년</p>
-                        <p style="font-weight:bold; font-size:1.1rem;">${art.title}</p>
-                        <p style="font-size:0.9rem;">${art.desc}</p>
-                    </div>
-                </div>
-            `;
-        });
-    </script>
-
+    <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
     <footer>&copy; 2026 Cheong-woo Yu In-kyoung. All rights reserved.</footer>
 </body>
 </html>
+```eof
+
+### 운영 팁:
+1. **내용 수정:** `year-desc` 클래스 안에 있는 텍스트를 원하는 대로 수정하시면 됩니다. `white-space: pre-line;` 설정을 해두어서 엔터를 치면 그대로 줄바꿈이 적용됩니다.
+2. **이미지 교체:** `main-art` 아래 `src` 주소만 바꾸면 각 연도의 대표 이미지를 손쉽게 변경할 수 있습니다.
+3. **추가:** 2017년, 2012년도 위와 같이 `<div class="year-section">` 블록을 복사해서 붙여넣고 내용만 바꾸시면 됩니다.
+
+이제 정말 작가님만의 작품집 느낌이 물씬 나네요! 혹시 다른 연도의 문구나 이미지 주소도 넣어드릴까요?
