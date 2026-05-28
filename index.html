@@ -12,13 +12,10 @@
         header { padding: 60px 20px; text-align: center; }
         .section { max-width: 800px; margin: 0 auto; padding: 60px 20px; scroll-margin-top: 80px; }
         h2 { border-left: 3px solid var(--accent); padding-left: 15px; margin-bottom: 40px; }
-        
-        /* 연도별 전시 섹션 */
-        .year-section { margin-bottom: 80px; padding: 30px; background: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .year-title { font-size: 1.5rem; color: var(--accent); font-weight: bold; margin-bottom: 20px; display: block; }
-        .year-desc { white-space: pre-line; font-size: 1rem; margin-bottom: 30px; color: #555; }
-        .main-art { width: 100%; height: auto; margin-bottom: 20px; }
-        
+        .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; font-size: 0.95rem; }
+        .year-section { margin-bottom: 80px; padding: 30px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .year-title { font-size: 1.6rem; color: var(--accent); font-weight: bold; margin-bottom: 20px; display: block; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .author-note { font-style: italic; color: #666; margin: 20px 0; white-space: pre-line; background: #f9f9f9; padding: 15px; border-left: 2px solid #ccc; }
         footer { text-align: center; padding: 50px; color: #aaa; font-size: 0.8rem; }
     </style>
 </head>
@@ -27,6 +24,7 @@
     <nav>
         <a href="#profile">프로필</a>
         <a href="#exhibitions">전시공간</a>
+        <a href="#sketch">작품스케치</a>
         <a href="#guestbook">방명록</a>
     </nav>
 
@@ -37,33 +35,70 @@
 
     <section id="profile" class="section">
         <h2>Artist Profile</h2>
-        <p>홍익대학교 미술대학원 졸업 및 다수의 개인전과 단체전 참여.</p>
+        <div class="profile-grid">
+            <div>
+                <strong>[학력]</strong><br>2007 홍익대 미술대학원 졸업<br><br>
+                <strong>[개인전]</strong><br>
+                2025 한옥 갤러리 (휴 休~)<br>
+                2022 한옥 갤러리 (흐르는 풍경)<br>
+                2019 한옥 갤러리 (마음이 머무는 풍경)<br>
+                2017 경인미술관 (休휴~)<br>
+                2015 한벽원 갤러리 (虛를 위한 實)<br>
+                2011 예술의 전당 (樹木)<br>
+                2009 홍익대학교 현대미술관
+            </div>
+            <div>
+                <strong>[단체전 등]</strong><br>
+                2024 제15회 안평안견예술정신전<br>
+                2022 제13회 안평안견예술정신전<br>
+                2019 산 마음전<br>
+                2015 홍익대 동양화과 총동문회전<br>
+                2011 새아침전 외 다수
+            </div>
+        </div>
     </section>
 
     <section id="exhibitions" class="section">
         <h2>전시공간 (Exhibitions)</h2>
-
-        <!-- 2025년 -->
+        <!-- 2025 -->
         <div class="year-section">
             <span class="year-title">2025년 - 휴(休)~</span>
-            <img src="https://i.imgur.com/GnXJ11w.jpg" class="main-art" alt="2025대표작">
-            <p class="year-desc">오르고, 내려가고….. 모이고, 흩어지고….. 변화의 파도 속에서 흔들리지 않는 중심을 찾으려 깊은 숨을 고른다. 휴(休)~ 그 숨결 속에</p>
+            <p class="author-note">오르고, 내려가고…… 모이고, 흩어지고…… 변화의 파도 속에서 흔들리지 않는 중심을 찾으려 깊은 숨을 고른다. 휴(休)~</p>
             <blockquote class="imgur-embed-pub" lang="en" data-id="a/41zOiwl"><a href="//imgur.com/a/41zOiwl">2025년 앨범 보기</a></blockquote>
         </div>
-
-        <!-- 2022년 -->
+        <!-- 2022 -->
         <div class="year-section">
             <span class="year-title">2022년 - 흐르는 풍경</span>
-            <img src="https://i.imgur.com/mQTaZnI.jpg" class="main-art" alt="2022대표작">
-            <p class="year-desc">시간의 흐름 속에 머무는 풍경을 담아내다.</p>
+            <p class="author-note">물처럼 바람처럼 흐른다. 흐르다 가는 길이 막히면 멈춰 기다리다 다시 흐른다. 흐름 속에 모난 부분은 둥글게‥‥ 온화한 풍경이 된다. 흐르는 풍경 속에 내 모습을 그려낸다.</p>
             <blockquote class="imgur-embed-pub" lang="en" data-id="a/5ahQIpK"><a href="//imgur.com/a/5ahQIpK">2022년 앨범 보기</a></blockquote>
         </div>
+        <!-- 2019 -->
+        <div class="year-section">
+            <span class="year-title">2019년 - 마음이 머무는 풍경</span>
+            <p class="author-note">물끄러미 바라본 그곳. 봄볕에 흔들이는 바람같다. 마음 머무는 풍경속 바람되어 그 곁애(愛) 머물다.</p>
+            <blockquote class="imgur-embed-pub" lang="en" data-id="a/3pJH7ri"><a href="//imgur.com/a/3pJH7ri">2019년 앨범 보기</a></blockquote>
+        </div>
+        <!-- 2017 -->
+        <div class="year-section">
+            <span class="year-title">2017년 - 휴(休)~</span>
+            <p class="author-note">물처럼 바람처럼 흐른다. 흐르다 가는 길이 막히면 멈춰 기다리다 다시 흐른다. 흐름 속에 모난 부분은 둥글게‥‥ 온화한 풍경이 된다. 흐르는 풍경 속에 내 모습을 그려낸다.</p>
+            <blockquote class="imgur-embed-pub" lang="en" data-id="a/ywpqDAG"><a href="//imgur.com/a/ywpqDAG">2017년 앨범 보기</a></blockquote>
+        </div>
+        <!-- 2012 -->
+        <div class="year-section">
+            <span class="year-title">2012년</span>
+            <p class="author-note">그림을 그리는 동안 내 마음을 들여다본다. 욕심을 지워갈 때 필선도, 마음도 자유로워진다. 그러다 생겨나는 욕심을 지우고…… 생겨나고…… 지우고…… 의식의 날카로운 모서리를 둥글게 다듬는다. 樹木 의 모습을 그리면서, 곡선의 자연모습으로</p>
+            <blockquote class="imgur-embed-pub" lang="en" data-id="a/ODpaJ0X"><a href="//imgur.com/a/ODpaJ0X">2012년 앨범 보기</a></blockquote>
+        </div>
+    </section>
 
-        <!-- 다른 연도들도 같은 방식으로 추가 가능 -->
+    <section id="sketch" class="section">
+        <h2>작품스케치</h2>
+        <p>작업 진행 과정을 차곡차곡 기록해 나갈 공간입니다.</p>
     </section>
 
     <section id="guestbook" class="section">
-        <h2>방명록 (Guestbook)</h2>
+        <h2>방명록</h2>
         <a href="https://forms.gle/K3dEng1LW7qC9vvd8" target="_blank" style="background:var(--accent); color:white; padding:12px 24px; text-decoration:none; border-radius:5px;">방명록 작성하기</a>
     </section>
 
