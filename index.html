@@ -9,14 +9,23 @@
         body { font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; line-height: 1.8; }
         nav { position: sticky; top: 0; background: var(--bg); padding: 20px; text-align: center; border-bottom: 1px solid #eee; z-index: 1000; }
         nav a { margin: 0 15px; text-decoration: none; color: var(--text); font-size: 0.9rem; letter-spacing: 2px; }
-        header { padding: 60px 20px; text-align: center; }
-        .section { max-width: 800px; margin: 0 auto; padding: 60px 20px; scroll-margin-top: 80px; }
-        h2 { border-left: 3px solid var(--accent); padding-left: 15px; margin-bottom: 40px; }
+        header { padding: 40px 20px; text-align: center; }
+        .section { max-width: 800px; margin: 0 auto; padding: 40px 20px; scroll-margin-top: 80px; }
+        h2 { border-left: 3px solid var(--accent); padding-left: 15px; margin-bottom: 30px; }
+        
         .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; font-size: 0.95rem; }
-        .year-section { margin-bottom: 80px; padding: 30px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .year-title { font-size: 1.6rem; color: var(--accent); font-weight: bold; margin-bottom: 20px; display: block; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .author-note { font-style: italic; color: #666; margin: 20px 0; white-space: pre-line; background: #f9f9f9; padding: 15px; border-left: 2px solid #ccc; }
-        footer { text-align: center; padding: 50px; color: #aaa; font-size: 0.8rem; }
+        
+        /* 연도별 전시 섹션 - 이미지 크기 고정 */
+        .year-section { margin-bottom: 60px; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .year-title { font-size: 1.4rem; color: var(--accent); font-weight: bold; margin-bottom: 15px; display: block; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        
+        /* 작가노트 상단 배치 및 스타일 */
+        .author-note { font-style: italic; color: #666; margin-bottom: 20px; white-space: pre-line; padding: 15px; background: #f9f9f9; border-left: 3px solid var(--accent); font-size: 0.95rem; }
+        
+        /* 이미지 크기 통일: 높이 400px 고정, 비율 유지 */
+        .main-art { width: 100%; height: 400px; object-fit: cover; border-radius: 5px; margin-bottom: 20px; }
+        
+        footer { text-align: center; padding: 40px; color: #aaa; font-size: 0.8rem; }
     </style>
 </head>
 <body>
@@ -63,36 +72,36 @@
         <!-- 2025 -->
         <div class="year-section">
             <span class="year-title">2025년 - 휴(休)~</span>
-            <img src="https://i.imgur.com/XQHsouo.jpg" class="main-art" alt="대표이미지">
             <p class="author-note">오르고, 내려가고…… 모이고, 흩어지고…… 변화의 파도 속에서 흔들리지 않는 중심을 찾으려 깊은 숨을 고른다. 휴(休)~</p>
+            <img src="https://i.imgur.com/XQHsouo.jpg" class="main-art" alt="대표이미지">
             <blockquote class="imgur-embed-pub" lang="en" data-id="a/41zOiwl"><a href="//imgur.com/a/41zOiwl">2025년 앨범 보기</a></blockquote>
         </div>
         <!-- 2022 -->
         <div class="year-section">
             <span class="year-title">2022년 - 흐르는 풍경</span>
-            <img src="https://i.imgur.com/slcoOzh.jpg" class="main-art" alt="대표이미지">       
             <p class="author-note">물처럼 바람처럼 흐른다. 흐르다 가는 길이 막히면 멈춰 기다리다 다시 흐른다. 흐름 속에 모난 부분은 둥글게‥‥ 온화한 풍경이 된다. 흐르는 풍경 속에 내 모습을 그려낸다.</p>
+            <img src="https://i.imgur.com/slcoOzh.jpg" class="main-art" alt="대표이미지">       
             <blockquote class="imgur-embed-pub" lang="en" data-id="a/5ahQIpK"><a href="//imgur.com/a/5ahQIpK">2022년 앨범 보기</a></blockquote>
         </div>
         <!-- 2019 -->
         <div class="year-section">
             <span class="year-title">2019년 - 마음이 머무는 풍경</span>
-            <img src="https://i.imgur.com/U5pUQql.jpg" class="main-art" alt="대표이미지">
             <p class="author-note">물끄러미 바라본 그곳. 봄볕에 흔들이는 바람같다. 마음 머무는 풍경속 바람되어 그 곁애(愛) 머물다.</p>
+            <img src="https://i.imgur.com/U5pUQql.jpg" class="main-art" alt="대표이미지">
             <blockquote class="imgur-embed-pub" lang="en" data-id="a/3pJH7ri"><a href="//imgur.com/a/3pJH7ri">2019년 앨범 보기</a></blockquote>
         </div>
         <!-- 2017 -->
         <div class="year-section">
             <span class="year-title">2017년 - 휴(休)~</span>
-            <img src="https://i.imgur.com/Rw5V72c.jpg" class="main-art" alt="대표이미지">
             <p class="author-note">물처럼 바람처럼 흐른다. 흐르다 가는 길이 막히면 멈춰 기다리다 다시 흐른다. 흐름 속에 모난 부분은 둥글게‥‥ 온화한 풍경이 된다. 흐르는 풍경 속에 내 모습을 그려낸다.</p>
+            <img src="https://i.imgur.com/Rw5V72c.jpg" class="main-art" alt="대표이미지">
             <blockquote class="imgur-embed-pub" lang="en" data-id="a/ywpqDAG"><a href="//imgur.com/a/ywpqDAG">2017년 앨범 보기</a></blockquote>
         </div>
         <!-- 2012 -->
         <div class="year-section">
             <span class="year-title">2012년</span>
-            <img src="https://i.imgur.com/FtO6Qh0.jpg?2" class="main-art" alt="대표이미지">
             <p class="author-note">그림을 그리는 동안 내 마음을 들여다본다. 욕심을 지워갈 때 필선도, 마음도 자유로워진다. 그러다 생겨나는 욕심을 지우고…… 생겨나고…… 지우고…… 의식의 날카로운 모서리를 둥글게 다듬는다. 樹木 의 모습을 그리면서, 곡선의 자연모습으로</p>
+            <img src="https://i.imgur.com/FtO6Qh0.jpg?2" class="main-art" alt="대표이미지">
             <blockquote class="imgur-embed-pub" lang="en" data-id="a/ODpaJ0X"><a href="//imgur.com/a/ODpaJ0X">2012년 앨범 보기</a></blockquote>
         </div>
     </section>
