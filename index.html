@@ -6,15 +6,17 @@
     <title>청우(淸又) 유인경 작가 | Cheong-woo Yu In-kyoung</title>
     <style>
         :root { --bg: #fdfcf9; --text: #3d3d3d; --accent: #8b857a; }
-        body { font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; line-height: 1.8; }
-        nav { position: sticky; top: 0; background: var(--bg); padding: 20px; text-align: center; border-bottom: 1px solid #eee; z-index: 1000; }
-        nav a { margin: 0 15px; text-decoration: none; color: var(--text); font-size: 0.9rem; letter-spacing: 2px; }
-        header { padding: 40px 20px; text-align: center; }
-        .section { max-width: 800px; margin: 0 auto; padding: 40px 20px; scroll-margin-top: 80px; }
-        h2 { border-left: 3px solid var(--accent); padding-left: 15px; margin-bottom: 30px; }
+        body { 
+            font-family: 'Nanum Myeongjo', serif; 
+            background-color: var(--bg); 
+            color: #3d3d3d; 
+            line-height: 1.8; 
+            margin: 0; 
+            padding-bottom: 50px; 
+        }
+        h1, .year-title, .gallery-link-btn { font-family: 'Nanum Square', sans-serif; }
         
-        .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; font-size: 0.95rem; }
-        
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
         .year-section { margin-bottom: 60px; padding: 25px; background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
         .year-title { font-size: 1.4rem; color: var(--accent); font-weight: bold; margin-bottom: 15px; display: block; border-bottom: 1px solid #eee; padding-bottom: 10px; }
         .author-note { font-style: italic; color: #666; margin-bottom: 20px; white-space: pre-line; padding: 15px; background: #f9f9f9; border-left: 3px solid var(--accent); font-size: 0.95rem; }
@@ -70,11 +72,7 @@
             </div>
         </div>
     </section>
-// 코드 중 이 부분만 수정하면 됩니다!
-const galleryData = {
-    '2025': ['https://i.imgur.com/GnXJ11w.jpg', 'https://이미지주소2.jpg'],
-    '2022': ['https://i.imgur.com/mQTaZnI.jpg', 'https://이미지주소3.jpg']
-};
+
     <section id="exhibitions" class="section">
         <h2>전시공간 (Exhibitions)</h2>
         <!-- 2025 -->
