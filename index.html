@@ -9,13 +9,13 @@
         :root { --bg: #fdfcf9; --text: #3d3d3d; --accent: #8b857a; }
         body { font-family: 'Nanum Myeongjo', serif; background-color: var(--bg); color: var(--text); margin: 0; line-height: 1.8; padding-bottom: 50px; }
         
-        /* 내비게이션 & 드롭다운 */
+        /* 내비게이션 - 글씨 두껍게 적용 */
         nav { position: sticky; top: 0; background: rgba(253, 252, 249, 0.98); padding: 20px; text-align: center; border-bottom: 1px solid #eee; z-index: 1000; }
-        .nav-item { position: relative; display: inline-block; margin: 0 20px; }
-        .nav-item a { text-decoration: none; color: var(--text); font-family: 'Nanum Square', sans-serif; font-size: 0.9rem; letter-spacing: 2px; }
-        .dropdown { display: none; position: absolute; top: 100%; left: -20px; background: white; border: 1px solid #eee; width: 140px; padding: 10px 0; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
+        .nav-item { position: relative; display: inline-block; margin: 0 15px; }
+        .nav-item a { text-decoration: none; color: var(--text); font-family: 'Nanum Square', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 1px; }
+        .dropdown { display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #eee; width: 140px; padding: 10px 0; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
         .nav-item:hover .dropdown { display: block; }
-        .dropdown a { display: block; padding: 8px 15px; font-size: 0.85rem; text-align: left; }
+        .dropdown a { display: block; padding: 8px 15px; font-size: 0.85rem; text-align: left; font-weight: 600; }
         
         header { padding: 40px 20px; text-align: center; }
         h1, h2 { font-family: 'Nanum Square', sans-serif; }
@@ -24,14 +24,20 @@
         /* 프로필 그리드 */
         .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; font-size: 0.95rem; }
         
-        /* 전시공간 그리드 (카드형) */
-        .exhibition-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
-        .exhibition-card { background: white; border: 1px solid #eee; padding: 20px; transition: 0.3s; border-radius: 5px; }
-        .exhibition-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .exhibition-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 3px; }
-        .exhibition-card h3 { font-size: 1.1rem; margin: 15px 0 10px; color: var(--accent); }
-        .card-note { font-size: 0.85rem; color: #666; font-style: italic; margin-bottom: 20px; flex-grow: 1; }
-        .exhibition-card a { display: block; font-size: 0.9rem; color: var(--accent); text-decoration: none; font-weight: bold; border: 1px solid var(--accent); padding: 10px; text-align: center; }
+        /* 전시공간 그리드 (반응형) */
+        .exhibition-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; margin-top: 30px; }
+        .exhibition-card { background: white; border: 1px solid #eee; padding: 20px; border-radius: 5px; display: flex; flex-direction: column; transition: 0.3s; }
+        .exhibition-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 3px; margin-bottom: 15px; }
+        .exhibition-card h3 { font-size: 1.1rem; margin: 0 0 10px 0; color: var(--accent); }
+        .card-note { font-size: 0.9rem; color: #555; font-style: italic; margin-bottom: 20px; flex-grow: 1; }
+        .exhibition-card a { font-size: 0.85rem; padding: 10px; border: 1px solid var(--accent); text-align: center; text-decoration: none; color: var(--accent); font-weight: bold; }
+
+        /* 모바일 대응 */
+        @media (max-width: 600px) {
+            .profile-grid { grid-template-columns: 1fr; }
+            .nav-item { margin: 0 5px; }
+            header h1 { font-size: 1.5rem; }
+        }
     </style>
 </head>
 <body>
@@ -48,7 +54,7 @@
                 <a href="#ex2012">2012년</a>
             </div>
         </div>
-        <div class="nav-item"><a href="#sketch">작품스케치</a></div>
+        <div class="nav-item"><a href="#sketch">스케치</a></div>
         <div class="nav-item"><a href="#guestbook">방명록</a></div>
     </nav>
 
@@ -88,44 +94,45 @@
             <div class="exhibition-card" id="ex2025">
                 <img src="https://i.imgur.com/XQHsouo.jpg" alt="2025">
                 <h3>2025년 - 휴(休)~</h3>
-                <p class="card-note">오르고, 내려가고…… 모이고, 흩어지고…… 변화의 파도 속에서 흔들리지 않는 중심을 찾으려 깊은 숨을 고른다.</p>
-                <a href="https://photos.app.goo.gl/qfWta1LLHTdaAkoz8" target="_blank">작품 감상하기</a>
+                <p class="card-note">변화의 파도 속에서 흔들리지 않는 중심을 찾으려 깊은 숨을 고른다.</p>
+                <a href="https://photos.app.goo.gl/qfWta1LLHTdaAkoz8" target="_blank">작품 감상</a>
             </div>
             <div class="exhibition-card" id="ex2022">
                 <img src="https://i.imgur.com/slcoOzh.jpg" alt="2022">
                 <h3>2022년 - 흐르는 풍경</h3>
-                <p class="card-note">흐름 속에 모난 부분은 둥글게‥‥ 온화한 풍경이 된다. 흐르는 풍경 속에 내 모습을 그려낸다.</p>
-                <a href="https://photos.app.goo.gl/jGjhQPzqZWDW5KfA6" target="_blank">작품 감상하기</a>
+                <p class="card-note">흐름 속에 모난 부분은 둥글게‥‥ 온화한 풍경이 된다.</p>
+                <a href="https://photos.app.goo.gl/jGjhQPzqZWDW5KfA6" target="_blank">작품 감상</a>
             </div>
             <div class="exhibition-card" id="ex2019">
                 <img src="https://i.imgur.com/U5pUQql.jpg" alt="2019">
                 <h3>2019년 - 마음이 머무는 풍경</h3>
                 <p class="card-note">물끄러미 바라본 그곳. 마음 머무는 풍경속 바람되어 그 곁애(愛) 머물다.</p>
-                <a href="https://photos.app.goo.gl/9KXYrnK582QJ5eWM9" target="_blank">작품 감상하기</a>
+                <a href="https://photos.app.goo.gl/9KXYrnK582QJ5eWM9" target="_blank">작품 감상</a>
             </div>
             <div class="exhibition-card" id="ex2017">
                 <img src="https://i.imgur.com/Rw5V72c.jpg" alt="2017">
                 <h3>2017년 - 휴(休)~</h3>
                 <p class="card-note">물처럼 바람처럼 흐른다. 흐르다 가는 길이 막히면 멈춰 기다리다 다시 흐른다.</p>
-                <a href="https://photos.app.goo.gl/y2KbQLTJYCypFdcg8" target="_blank">작품 감상하기</a>
+                <a href="https://photos.app.goo.gl/y2KbQLTJYCypFdcg8" target="_blank">작품 감상</a>
             </div>
             <div class="exhibition-card" id="ex2012">
                 <img src="https://i.imgur.com/FtO6Qh0.jpg" alt="2012">
                 <h3>2012년</h3>
                 <p class="card-note">그림을 그리는 동안 내 마음을 들여다본다. 욕심을 지워갈 때 필선도, 마음도 자유로워진다.</p>
-                <a href="https://photos.app.goo.gl/g67vbCEPgFdHR5GVA" target="_blank">작품 감상하기</a>
+                <a href="https://photos.app.goo.gl/g67vbCEPgFdHR5GVA" target="_blank">작품 감상</a>
             </div>
         </div>
     </section>
 
     <section id="sketch" class="section">
         <h2>작품스케치</h2>
-        <p>작업 진행 과정을 차곡차곡 기록해 나갈 공간입니다.</p>
+        <p>작업 진행 과정을 차곡차곡 기록해 나가는 공간입니다.</p>
     </section>
 
     <section id="guestbook" class="section">
         <h2>방명록</h2>
-        <a href="https://forms.gle/K3dEng1LW7qC9vvd8" target="_blank" style="background:var(--accent); color:white; padding:12px 24px; text-decoration:none; border-radius:5px; font-family:'Nanum Square';">방명록 작성하기</a>
+        <a href="https://forms.gle/K3dEng1LW7qC9vvd8" target="_blank" style="background:var(--accent); color:white; padding:12px 24px; text-decoration:none; border-radius:5px; font-family:'Nanum Square'; display:inline-block;">방명록 작성하기</a>
     </section>
+
 </body>
 </html>
